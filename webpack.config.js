@@ -6,10 +6,9 @@ var path = require('path');
 
 var config = {
     srcDir: 'src',
-    entry: 'app.jsx',
+    entry: 'App.jsx',
     outputDir: 'public',
     outputFile: 'dist/bundle.js', //relative to outputDir
-
 }
 
 
@@ -41,8 +40,7 @@ module.exports = {
         }, {
             test: /\.css$/,
             loader: 'style!css'
-        },
-        {
+        }, {
             test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
             loader: require.resolve("file-loader") + '?name=assets/[name].[ext]'
         }]
