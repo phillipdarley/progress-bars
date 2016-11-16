@@ -55,14 +55,14 @@ class ProgressController extends React.Component {
     render() {
         return (<div className="ProgressController" >
             <div className="col-md-6" >
-                < select value={
+                <select value={
                     this.state.currentBar
                 }
                     onChange={
                         this.updateCurrentBarSelection
                     } > {
                         this.getProgressBarOptions()
-                    } </select> </div> < div className="col-md-6" > {
+                    } </select> </div> <div className="col-md-6" > {
                         this.getProgressButtons()
                     } </div> </div>
         );
