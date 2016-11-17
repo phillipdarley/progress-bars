@@ -53,18 +53,29 @@ class ProgressController extends React.Component {
     }
 
     render() {
-        return (<div className="ProgressController" >
-            <div className="col-md-6" >
-                <select value={
-                    this.state.currentBar
-                }
-                    onChange={
-                        this.updateCurrentBarSelection
-                    } > {
-                        this.getProgressBarOptions()
-                    } </select> </div> <div className="col-md-6" > {
-                        this.getProgressButtons()
-                    } </div> </div>
+        return (
+            <div className="col-md-6 col-controls">
+                <div className="row">
+                    <select className="form-control" value={
+                        this.state.currentBar
+                    }
+                        onChange={
+                            this.updateCurrentBarSelection
+                        } > {
+                            this.getProgressBarOptions()
+                        } </select>
+                </div>
+
+
+
+                <div className="row" >
+                    <div className="btn-group btn-group-custom">
+                        {
+                            this.getProgressButtons()
+                        }
+                    </div>
+                </div>
+            </div>
         );
     }
 }

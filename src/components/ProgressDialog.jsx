@@ -62,29 +62,39 @@ class ProgressDialog extends React.Component {
             return <h1> Loading... </h1>;
         }
 
-        return (<div className="ProgressDialog jumbotron text-center container-fluid" >
+        return (
 
-            <div className="row" >
-                <div className="col-md-12" > <h1> Progress Bars Demo </h1></div>
-            </div>
+            <div className="container container-fluid" >
 
-            <div className="row" >
-                <div className="col-md-12" > {
-                    this.buildProgressBarList()
-                } </div> </div > < div className="row" >
-                < ProgressController buttons={
-                    this.state.buttons
-                }
-                    bars={
-                        this.state.bars
-                    }
-                    onChange={
-                        this.updateProgressBar
-                    }
-                    />
+                <div className="row" >
+                    <div className="col-md-12">
+                        <div className="jumbotron">
+                            <h1> Progress Bars Demo </h1>
+                        </div>
+                    </div>
                 </div>
 
-        </div>
+                <div className="row" >
+                    <div className="col-md-6" > {
+                        this.buildProgressBarList()
+                    }
+                    </div>
+
+
+                    <ProgressController buttons={
+                        this.state.buttons
+                    }
+                        bars={
+                            this.state.bars
+                        }
+                        onChange={
+                            this.updateProgressBar
+                        }
+                        />
+                </div>
+            </div>
+
+
         );
     }
 }

@@ -14,7 +14,7 @@ class ProgressBar extends React.Component {
             <div className={
                 (this.isOverLimit() ? 'progress-bar-danger' : 'progress-bar-success')
             } >
-                <span> {
+                <span className="percentageText"> {
                     this.calculatePercentage()
                 }% </span> </div> </div>
         );
